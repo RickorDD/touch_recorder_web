@@ -32,7 +32,7 @@ defmodule TouchRecorderWeb.ApiSubmissionController do
         String.to_integer(ch_day)
       }),Ecto.Date),
       order_by: [desc: s.inserted_at],
-      select: s.archive
+      select:  s.archive
 
     submission = Repo.all(query)
     json conn, %{ submission: submission }
